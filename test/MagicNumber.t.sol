@@ -23,6 +23,7 @@ contract MagicNumberTest is Test {
      [09] RETURN  // return 0x20(32) bytes from 00
     -> bytecode = 0x602A60005260206000F3
 
+    to deploy 
     [00] PUSH10 602A60005260206000F3 // 10bytes
     [0b] PUSH1 00
     [0d] MSTORE  //store 602A60005260206000F3 in 00
@@ -30,8 +31,8 @@ contract MagicNumberTest is Test {
     [10] PUSH1 16
     [12] RETURN // return 0x0a(10) bytes from 0x16(22) 
     -> bytescode = 0x69602A60005260206000F3600052600A6016F3
-
     */
+
     function testMagicNumber() public {
         MagicNumberFactory factory = new MagicNumberFactory();
         address solveInstance;

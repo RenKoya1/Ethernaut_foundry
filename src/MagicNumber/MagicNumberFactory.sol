@@ -24,8 +24,10 @@ contract MagicNumberFactory is Level {
         address payable _instance,
         address _player
     ) public view override returns (bool) {
+        _player;
         MagicNum instance = MagicNum(_instance);
         Solver solver = Solver(instance.solver());
+        console.log(address(solver));
         bytes32 magic = solver.whatIsTheMeaningOfLife();
         console.log(uint(magic));
         if (
